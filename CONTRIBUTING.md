@@ -36,31 +36,31 @@ If you change static export behavior, also run `npm run export` and confirm outp
 |------|------|
 | [app/](app/) | Next.js App Router: `layout.tsx`, `page.tsx`, global styles |
 | [src/components/](src/components/) | UI components |
-| [src/hooks/](src/hooks/) | React hooks (e.g. language + RxJS bridge) |
-| [src/lib/](src/lib/) | Shared logic grouped by **domain folders** (not a flat dump of unrelated files) |
+| [src/hooks/](src/hooks/) | React hooks (e.g. observable state helpers) |
+| [src/features/](src/features/) | Encapsulated features (state + behavior), including translation/i18n |
 
-### Adding new `src/lib` modules
+### Adding new `src/features` modules
 
 Prefer a dedicated subfolder per concern (e.g. `translation/`, future `analytics/`) with:
 
-- **Internal files** — config, data, store, helpers as needed.
-- **Barrel file** — `index.ts` re-exports the public API so app code imports from one path (e.g. `@/lib/translation` or `../lib/translation`).
+- **Internal files** — config/types, store, hooks, helpers as needed.
+- **Barrel file** — `index.ts` re-exports the public API so app code imports from one path (e.g. `@/features/translation` or `../features/translation`).
 
-Update the table in this section when you introduce a new top-level area under `src/lib/` or materially change `app/` / `src/` structure.
+Update the table in this section when you introduce a new top-level area under `src/features/` or materially change `app/` / `src/` structure.
 
-### Translation / i18n (`src/lib/translation`)
+### Translation / i18n (`src/features/translation`)
 
 Current layout:
 
 - `config.ts` — `Language` type, defaults, shared types.
-- `text.ts` — copy per language.
 - `store.ts` — RxJS `BehaviorSubject` for the active language (`language$`, `setLanguage`, etc.).
-- `index.ts` — exports consumers should use (types, `getTranslationText`, store API).
+- `useTranslations.ts` — `useTranslations(translations)` hook that binds component-local dictionaries to the observable language.
+- `index.ts` — public feature API (hooks + store).
 
 When adding strings:
 
-1. Extend `TranslationKey` and entries in `text.ts` for each language.
-2. Use `getTranslationText` with `useLanguage()` (or the current language from the store) in components.
+1. Create/extend a component-local `translations.ts` with a typed dictionary for that component’s keys.
+2. Call `useTranslations(componentTranslations)` inside the component to access `t(key)` values.
 
 Document here if we later adopt a different i18n approach or move persistence (e.g. URL, cookie) into this module.
 
@@ -74,4 +74,4 @@ Document here if we later adopt a different i18n approach or move persistence (e
 
 You can append short dated bullets below when useful for the team (remove or trim if it gets noisy).
 
-- **2025-03-22** — Initial `CONTRIBUTING.md`; documented `src/lib/translation` barrel, store in `translation/store.ts`, and PR hygiene.
+- **2025-03-22** — Initial `CONTRIBUTING.md`; documented the translation feature pattern and PR hygiene.

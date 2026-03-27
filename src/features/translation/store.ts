@@ -1,5 +1,5 @@
 import { BehaviorSubject } from "rxjs";
-import { Language, DEFAULT_LANGUAGE } from "./config";
+import { DEFAULT_LANGUAGE, type Language } from "./config";
 
 const languageSubject = new BehaviorSubject<Language>(DEFAULT_LANGUAGE);
 
@@ -10,8 +10,8 @@ export function setLanguage(language: Language) {
 }
 
 export function toggleLanguage() {
-  const current = languageSubject.getValue();
-  languageSubject.next(current === "en" ? "es" : "en");
+  const currentLanguage = languageSubject.getValue();
+  languageSubject.next(currentLanguage === "en" ? "es" : "en");
 }
 
 export function getCurrentLanguage(): Language {

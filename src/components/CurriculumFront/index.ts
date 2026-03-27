@@ -1,0 +1,1 @@
+export { CurriculumFront } from "./CurriculumFront";

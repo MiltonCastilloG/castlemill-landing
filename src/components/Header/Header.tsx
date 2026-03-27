@@ -1,22 +1,24 @@
 "use client";
 
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage, useTranslations } from "../../features/translation";
+import { headerTranslations } from "./translations";
 
 export function Header() {
   const { language, setLanguage } = useLanguage();
+  const { t } = useTranslations(headerTranslations);
 
   return (
-    <header className="w-full max-w-4xl mx-auto flex items-center justify-between py-6 px-4">
-      <div className="text-sm font-semibold tracking-[0.2em] uppercase text-slate-400">
-        CastleMill
+    <header className="mx-auto flex w-full max-w-4xl items-center justify-between px-4 py-6">
+      <div className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+        {t("brand")}
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-xs text-slate-500 mr-2">Language</span>
-        <div className="inline-flex rounded-full bg-slate-900/70 border border-slate-700 p-1">
+        <span className="mr-2 text-xs text-slate-500">{t("languageLabel")}</span>
+        <div className="inline-flex rounded-full border border-slate-700 bg-slate-900/70 p-1">
           <button
             type="button"
             onClick={() => setLanguage("es")}
-            className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
+            className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
               language === "es"
                 ? "bg-slate-100 text-slate-900"
                 : "text-slate-300 hover:text-white"
@@ -28,7 +30,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setLanguage("en")}
-            className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
+            className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
               language === "en"
                 ? "bg-slate-100 text-slate-900"
                 : "text-slate-300 hover:text-white"
@@ -42,4 +44,3 @@ export function Header() {
     </header>
   );
 }
-
