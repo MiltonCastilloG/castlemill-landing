@@ -8,6 +8,22 @@ body {
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50;
+  @apply antialiased;
+}
+
+@layer utilities {
+  /* Main app surfaces */
+  .theme-body {
+    @apply bg-lime-50 text-black antialiased dark:bg-teal-950 dark:text-teal-100;
+  }
+
+  .theme-page-gradient {
+    @apply bg-white dark:bg-teal-950;
+  }
+
+  /* Shared text role across multiple features */
+  .theme-muted-text {
+    @apply text-black dark:text-teal-300;
+  }
 }
 
