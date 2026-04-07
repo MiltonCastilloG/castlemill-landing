@@ -1,13 +1,13 @@
 "use client";
 
 import { Header } from "../src/components/Header";
-import { CurriculumFront } from "../src/components/CurriculumFront";
+import { LandingBanner } from "../src/components/LandingBanner";
 
 export default function HomePage() {
   return (
-    <div className="theme-page-gradient min-h-screen flex flex-col">
+    <div className="theme-page-gradient min-h-dvh flex flex-col">
       <Header />
-      <CurriculumFront />
+      <LandingBanner />
     </div>
   );
 }
