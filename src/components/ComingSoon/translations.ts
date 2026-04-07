@@ -1,14 +1,14 @@
-import type { Translations } from "../../features/translation";
+import type { TranslationObj } from "../../features/translation";
 
-type ComingSoonKey = "comingSoon" | "tagline";
-
-export const comingSoonTranslations: Translations<ComingSoonKey> = {
-  en: {
-    comingSoon: "Coming soon...",
-    tagline: "Soon with your closest internet provider.",
+export const comingSoonTranslations: TranslationObj = {
+  comingSoon: {
+    en: "Coming soon...",
+    es: "Proximamente...",
   },
-  es: {
-    comingSoon: "Proximamente...",
-    tagline: "Pronto con tu proveedor de internet mas cercano.",
+  tagline: {
+    en: "Soon with your closest internet provider.",
+    es: "Pronto con tu proveedor de internet mas cercano.",
   },
 };
+
+export type ComingSoonKey = keyof typeof comingSoonTranslations;

@@ -8,17 +8,6 @@ export function CurriculumFront() {
 
   return (
     <main className="flex-1 pb-14">
-      <section className="w-full border-y border-lime-300 bg-white px-4 py-14 text-black shadow-[0_16px_45px_-24px_rgba(15,23,42,0.18)] sm:px-6 lg:px-8 dark:border-teal-700 dark:bg-teal-950/70 dark:text-teal-100 dark:shadow-[0_16px_45px_-24px_rgba(16,185,129,0.25)]">
-        <div className="mx-auto w-full max-w-6xl text-center">
-          <h1 className="text-5xl font-semibold uppercase tracking-[0.08em] sm:text-6xl md:text-7xl">
-            {t("heroTitle")}
-          </h1>
-          <p className="theme-muted-text mt-4 text-lg font-medium tracking-wide sm:text-xl">
-            {t("heroSubtitle")}
-          </p>
-        </div>
-      </section>
-
       <section className="mt-8 w-full space-y-3">
         {curriculumFrontSections.map((section, index) => {
           const isEven = index % 2 === 0;

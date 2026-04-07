@@ -1,39 +1,133 @@
-import type { Translations } from "../../features/translation";
+import type { TranslationObj } from "../../features/translation";
 
-export type CurriculumFrontKey =
-  | "heroTitle"
-  | "heroSubtitle"
-  | "section1Title"
-  | "section1Description"
-  | "section1Tag1"
-  | "section1Tag2"
-  | "section1Tag3"
-  | "section2Title"
-  | "section2Description"
-  | "section2Tag1"
-  | "section2Tag2"
-  | "section2Tag3"
-  | "section3Title"
-  | "section3Description"
-  | "section3Tag1"
-  | "section3Tag2"
-  | "section3Tag3"
-  | "section4Title"
-  | "section4Description"
-  | "section4Tag1"
-  | "section4Tag2"
-  | "section4Tag3"
-  | "section5Title"
-  | "section5Description"
-  | "section5Tag1"
-  | "section5Tag2"
-  | "section5Tag3"
-  | "section6Title"
-  | "section6Description"
-  | "section6Tag1"
-  | "section6Tag2"
-  | "section6Tag3"
-  | "footerNote";
+export const curriculumFrontTranslations: TranslationObj = {
+  section1Title: {
+    en: "Academic Vision",
+    es: "Vision Academica",
+  },
+  section1Description: {
+    en: "A clear overview of the educational direction, purpose, and long-term outcomes.",
+    es: "Una vista clara de la direccion educativa, su proposito y los resultados a largo plazo.",
+  },
+  section1Tag1: {
+    en: "Mission",
+    es: "Mision",
+  },
+  section1Tag2: {
+    en: "Structure",
+    es: "Estructura",
+  },
+  section1Tag3: {
+    en: "Impact",
+    es: "Impacto",
+  },
+  section2Title: {
+    en: "Learning Routes",
+    es: "Rutas de Aprendizaje",
+  },
+  section2Description: {
+    en: "Multiple paths for different profiles, pacing, and levels of prior experience.",
+    es: "Multiples caminos para diferentes perfiles, ritmos y niveles de experiencia previa.",
+  },
+  section2Tag1: {
+    en: "Beginner",
+    es: "Inicial",
+  },
+  section2Tag2: {
+    en: "Intermediate",
+    es: "Intermedio",
+  },
+  section2Tag3: {
+    en: "Advanced",
+    es: "Avanzado",
+  },
+  section3Title: {
+    en: "Projects and Practice",
+    es: "Proyectos y Practica",
+  },
+  section3Description: {
+    en: "Hands-on workspaces designed for practical application and portfolio-ready results.",
+    es: "Espacios de trabajo practicos para aplicar conocimientos y lograr resultados de portafolio.",
+  },
+  section3Tag1: {
+    en: "Labs",
+    es: "Laboratorios",
+  },
+  section3Tag2: {
+    en: "Case Studies",
+    es: "Casos",
+  },
+  section3Tag3: {
+    en: "Mentorship",
+    es: "Mentoria",
+  },
+  section4Title: {
+    en: "Resources and Materials",
+    es: "Recursos y Materiales",
+  },
+  section4Description: {
+    en: "A curated collection of references, guides, templates, and support resources.",
+    es: "Una coleccion curada de referencias, guias, plantillas y recursos de apoyo.",
+  },
+  section4Tag1: {
+    en: "Guides",
+    es: "Guias",
+  },
+  section4Tag2: {
+    en: "Templates",
+    es: "Plantillas",
+  },
+  section4Tag3: {
+    en: "Documentation",
+    es: "Documentacion",
+  },
+  section5Title: {
+    en: "Progress and Evaluation",
+    es: "Progreso y Evaluacion",
+  },
+  section5Description: {
+    en: "Consistent checkpoints to review progress, reinforce competencies, and identify growth.",
+    es: "Puntos de control constantes para revisar avances y reforzar competencias clave.",
+  },
+  section5Tag1: {
+    en: "Milestones",
+    es: "Hitos",
+  },
+  section5Tag2: {
+    en: "Feedback",
+    es: "Retroalimentacion",
+  },
+  section5Tag3: {
+    en: "Rubrics",
+    es: "Rubricas",
+  },
+  section6Title: {
+    en: "Community and Collaboration",
+    es: "Comunidad y Colaboracion",
+  },
+  section6Description: {
+    en: "Space for discussions, peer interaction, and collaborative development opportunities.",
+    es: "Un espacio para conversaciones, interaccion entre pares y oportunidades de creacion conjunta.",
+  },
+  section6Tag1: {
+    en: "Network",
+    es: "Red",
+  },
+  section6Tag2: {
+    en: "Workshops",
+    es: "Talleres",
+  },
+  section6Tag3: {
+    en: "Shared Goals",
+    es: "Metas Compartidas",
+  },
+  footerNote: {
+    en: "This front is a baseline design and can be expanded with more sections, new variants, and real content.",
+    es: "Este front es un diseno base y se puede ampliar con mas secciones, nuevas variantes y contenido real.",
+  },
+};
+
+export type CurriculumFrontKey = keyof typeof curriculumFrontTranslations;
 
 type SectionBlueprint = {
   titleKey: CurriculumFrontKey;
@@ -73,90 +167,3 @@ export const curriculumFrontSections: SectionBlueprint[] = [
     tagKeys: ["section6Tag1", "section6Tag2", "section6Tag3"],
   },
 ];
-
-export const curriculumFrontTranslations: Translations<CurriculumFrontKey> = {
-  en: {
-    heroTitle: "castlemill",
-    heroSubtitle: "Milton Castillo Hub",
-    section1Title: "Academic Vision",
-    section1Description:
-      "A clear overview of the educational direction, purpose, and long-term outcomes.",
-    section1Tag1: "Mission",
-    section1Tag2: "Structure",
-    section1Tag3: "Impact",
-    section2Title: "Learning Routes",
-    section2Description:
-      "Multiple paths for different profiles, pacing, and levels of prior experience.",
-    section2Tag1: "Beginner",
-    section2Tag2: "Intermediate",
-    section2Tag3: "Advanced",
-    section3Title: "Projects and Practice",
-    section3Description:
-      "Hands-on workspaces designed for practical application and portfolio-ready results.",
-    section3Tag1: "Labs",
-    section3Tag2: "Case Studies",
-    section3Tag3: "Mentorship",
-    section4Title: "Resources and Materials",
-    section4Description:
-      "A curated collection of references, guides, templates, and support resources.",
-    section4Tag1: "Guides",
-    section4Tag2: "Templates",
-    section4Tag3: "Documentation",
-    section5Title: "Progress and Evaluation",
-    section5Description:
-      "Consistent checkpoints to review progress, reinforce competencies, and identify growth.",
-    section5Tag1: "Milestones",
-    section5Tag2: "Feedback",
-    section5Tag3: "Rubrics",
-    section6Title: "Community and Collaboration",
-    section6Description:
-      "Space for discussions, peer interaction, and collaborative development opportunities.",
-    section6Tag1: "Network",
-    section6Tag2: "Workshops",
-    section6Tag3: "Shared Goals",
-    footerNote:
-      "This front is a baseline design and can be expanded with more sections, new variants, and real content.",
-  },
-  es: {
-    heroTitle: "castlemill",
-    heroSubtitle: "Milton Castillo Hub",
-    section1Title: "Vision Academica",
-    section1Description:
-      "Una vista clara de la direccion educativa, su proposito y los resultados a largo plazo.",
-    section1Tag1: "Mision",
-    section1Tag2: "Estructura",
-    section1Tag3: "Impacto",
-    section2Title: "Rutas de Aprendizaje",
-    section2Description:
-      "Multiples caminos para diferentes perfiles, ritmos y niveles de experiencia previa.",
-    section2Tag1: "Inicial",
-    section2Tag2: "Intermedio",
-    section2Tag3: "Avanzado",
-    section3Title: "Proyectos y Practica",
-    section3Description:
-      "Espacios de trabajo practicos para aplicar conocimientos y lograr resultados de portafolio.",
-    section3Tag1: "Laboratorios",
-    section3Tag2: "Casos",
-    section3Tag3: "Mentoria",
-    section4Title: "Recursos y Materiales",
-    section4Description:
-      "Una coleccion curada de referencias, guias, plantillas y recursos de apoyo.",
-    section4Tag1: "Guias",
-    section4Tag2: "Plantillas",
-    section4Tag3: "Documentacion",
-    section5Title: "Progreso y Evaluacion",
-    section5Description:
-      "Puntos de control constantes para revisar avances y reforzar competencias clave.",
-    section5Tag1: "Hitos",
-    section5Tag2: "Retroalimentacion",
-    section5Tag3: "Rubricas",
-    section6Title: "Comunidad y Colaboracion",
-    section6Description:
-      "Un espacio para conversaciones, interaccion entre pares y oportunidades de creacion conjunta.",
-    section6Tag1: "Red",
-    section6Tag2: "Talleres",
-    section6Tag3: "Metas Compartidas",
-    footerNote:
-      "Este front es un diseno base y se puede ampliar con mas secciones, nuevas variantes y contenido real.",
-  },
-};

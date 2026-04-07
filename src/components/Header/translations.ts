@@ -1,16 +1,18 @@
-import type { Translations } from "../../features/translation";
+import type { TranslationObj } from "../../features/translation";
 
-type HeaderTranslationKey = "languageLabel" | "themeLabel" | "brand";
-
-export const headerTranslations: Translations<HeaderTranslationKey> = {
-  en: {
-    languageLabel: "Language",
-    themeLabel: "Theme",
-    brand: "CastleMill",
+export const headerTranslations: TranslationObj = {
+  languageLabel: {
+    en: "Language",
+    es: "Idioma",
   },
-  es: {
-    languageLabel: "Idioma",
-    themeLabel: "Tema",
-    brand: "CastleMill",
+  themeLabel: {
+    en: "Theme",
+    es: "Tema",
+  },
+  brand: {
+    en: "CastleMill",
+    es: "CastleMill",
   },
 };
+
+export type HeaderTranslationKey = keyof typeof headerTranslations;

@@ -6,7 +6,7 @@ import {
   setLanguage,
   toggleLanguage,
 } from "./store";
-import type { Language, Translations } from "./config";
+import type { Language, TranslationObj } from "./config";
 
 export function useLanguage() {
   const language = useObservableState(language$, getCurrentLanguage());
@@ -18,18 +18,20 @@ export function useLanguage() {
   };
 }
 
-export function useTranslations<TKey extends string>(
-  translations: Translations<TKey>,
+export function useTranslations<TTranslations extends TranslationObj>(
+  translations: TTranslations,
 ) {
   const { language } = useLanguage();
 
   return useMemo(
     () => ({
       language,
-      t: (key: TKey) => translations[language][key],
+      // Keep keys inferred from each translation object so t("...") is
+      // compile-time checked against only the keys that actually exist.
+      t: (key: keyof TTranslations) => translations[key][language],
     }),
     [language, translations],
   );
 }
 
-export type { Language, Translations };
+export type { Language, TranslationObj };
