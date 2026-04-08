@@ -13,7 +13,9 @@ export function ExperienceSection({ title, t }: ExperienceSectionProps) {
 
   return (
     <article className="rounded-2xl border border-lime-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-teal-700 dark:bg-teal-950/80">
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-black dark:text-teal-100">{title}</h2>
+      <h2 className="text-sm font-semibold uppercase tracking-wide text-black dark:text-teal-100">
+        {title}
+      </h2>
       <div className="mt-4 space-y-5 border-l-2 border-lime-200 pl-4 dark:border-teal-700">
         {experienceItems.map((experience: ExperienceItem, index: number) => (
           <article
@@ -55,9 +57,13 @@ export function ExperienceSection({ title, t }: ExperienceSectionProps) {
                   <h3 className="text-sm font-semibold text-black dark:text-teal-100">
                     {t(experience.titleKey)}
                   </h3>
-                  <p className="text-xs text-gray-600 dark:text-teal-300">{t(experience.dateKey)}</p>
+                  <p className="text-xs text-gray-600 dark:text-teal-300">
+                    {t(experience.dateKey)}
+                  </p>
                 </div>
-                <p className="mt-1 text-sm text-gray-700 dark:text-teal-200">{t(experience.companyKey)}</p>
+                <p className="mt-1 text-sm text-gray-700 dark:text-teal-200">
+                  {t(experience.companyKey)}
+                </p>
               </div>
               {openExperienceIndices.has(index) ? null : (
                 <div className="mt-2 flex justify-center">

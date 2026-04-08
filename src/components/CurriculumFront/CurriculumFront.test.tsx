@@ -33,11 +33,15 @@ describe("CurriculumFront", () => {
     expect(screen.getByText("contactLine")).toBeInTheDocument();
     expect(screen.getByText("locationLine")).toBeInTheDocument();
 
-    ["summaryTitle", "experienceTitle", "educationTitle", "technicalSkillsTitle", "languagesTitle"].forEach(
-      (headingKey) => {
-        expect(screen.getByRole("heading", { name: headingKey })).toBeInTheDocument();
-      }
-    );
+    [
+      "summaryTitle",
+      "experienceTitle",
+      "educationTitle",
+      "technicalSkillsTitle",
+      "languagesTitle",
+    ].forEach((headingKey) => {
+      expect(screen.getByRole("heading", { name: headingKey })).toBeInTheDocument();
+    });
 
     experienceItems.forEach((experience: ExperienceItem) => {
       expect(screen.getByRole("heading", { name: experience.titleKey })).toBeInTheDocument();
