@@ -1,11 +1,6 @@
 import { useMemo } from "react";
 import { useObservableState } from "../../hooks/useObservableState";
-import {
-  getCurrentLanguage,
-  language$,
-  setLanguage,
-  toggleLanguage,
-} from "./store";
+import { getCurrentLanguage, language$, setLanguage, toggleLanguage } from "./store";
 import type { Language, TranslationObj } from "./config";
 
 export function useLanguage() {
@@ -18,9 +13,7 @@ export function useLanguage() {
   };
 }
 
-export function useTranslations<TTranslations extends TranslationObj>(
-  translations: TTranslations,
-) {
+export function useTranslations<TTranslations extends TranslationObj>(translations: TTranslations) {
   const { language } = useLanguage();
 
   return useMemo(

@@ -22,22 +22,22 @@ npm run dev
 
 Run these locally; extend this list here when we add CI or new scripts.
 
-| Command | Purpose |
-|--------|---------|
-| `npm run lint` | ESLint via Next.js |
+| Command            | Purpose                                                                  |
+| ------------------ | ------------------------------------------------------------------------ |
+| `npm run lint`     | ESLint via Next.js                                                       |
 | `npx tsc --noEmit` | TypeScript (no npm script yet—add one in `package.json` when convenient) |
-| `npm run build` | Production build |
+| `npm run build`    | Production build                                                         |
 
 If you change static export behavior, also run `npm run export` and confirm output under `out/` as in the README.
 
 ## Project layout
 
-| Path | Role |
-|------|------|
-| [app/](app/) | Next.js App Router: `layout.tsx`, `page.tsx`, global styles |
-| [src/components/](src/components/) | UI components |
-| [src/hooks/](src/hooks/) | React hooks (e.g. observable state helpers) |
-| [src/features/](src/features/) | Encapsulated features (state + behavior), including translation/i18n |
+| Path                               | Role                                                                 |
+| ---------------------------------- | -------------------------------------------------------------------- |
+| [app/](app/)                       | Next.js App Router: `layout.tsx`, `page.tsx`, global styles          |
+| [src/components/](src/components/) | UI components                                                        |
+| [src/hooks/](src/hooks/)           | React hooks (e.g. observable state helpers)                          |
+| [src/features/](src/features/)     | Encapsulated features (state + behavior), including translation/i18n |
 
 ### Adding new `src/features` modules
 

@@ -24,4 +24,3 @@ export function persistTheme(theme: Theme) {
 export function getInitialTheme(): Theme {
   return getStoredTheme() ?? getSystemTheme();
 }
-

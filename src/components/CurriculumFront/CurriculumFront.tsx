@@ -46,9 +46,7 @@ export function CurriculumFront() {
 
       <section className="mx-auto mt-8 w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-lime-300 bg-white p-6 text-center dark:border-teal-600/80 dark:bg-teal-950/85">
-          <p className="theme-muted-text text-sm sm:text-base">
-            {t("footerNote")}
-          </p>
+          <p className="theme-muted-text text-sm sm:text-base">{t("footerNote")}</p>
         </div>
       </section>
     </main>

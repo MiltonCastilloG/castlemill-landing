@@ -1,10 +1,7 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Header } from "./Header";
-import {
-  resetTranslationMocks,
-  setLanguageMock,
-} from "../../test/mocks/translation";
+import { resetTranslationMocks, setLanguageMock } from "../../test/mocks/translation";
 import { resetThemeMocks, setThemeMock } from "../../test/mocks/theme";
 
 vi.mock("../../features/translation", async () => {

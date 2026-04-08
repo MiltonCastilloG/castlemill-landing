@@ -28,4 +28,3 @@ npm run export
 ```
 
 The static site will be generated in the `out` directory. You can upload the contents of `out` to S3 for static hosting.
-

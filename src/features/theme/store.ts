@@ -60,4 +60,3 @@ export function toggleTheme() {
   const next: Theme = getCurrentTheme() === "dark" ? "light" : "dark";
   setTheme(next);
 }
-

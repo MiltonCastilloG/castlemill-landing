@@ -11,7 +11,7 @@ describe("RootLayout", () => {
     const markup = renderToStaticMarkup(
       <RootLayout>
         <main>Page Content</main>
-      </RootLayout>
+      </RootLayout>,
     );
 
     expect(markup).toContain("theme");

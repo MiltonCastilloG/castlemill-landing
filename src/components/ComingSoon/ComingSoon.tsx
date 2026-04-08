@@ -12,9 +12,7 @@ export function ComingSoon() {
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
           {t("comingSoon")}
         </h1>
-        <p className="theme-muted-text text-base md:text-lg">
-          {t("tagline")}
-        </p>
+        <p className="theme-muted-text text-base md:text-lg">{t("tagline")}</p>
       </div>
     </main>
   );

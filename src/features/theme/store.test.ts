@@ -17,7 +17,10 @@ function setupMatchMedia() {
     },
   };
 
-  vi.stubGlobal("matchMedia", vi.fn(() => media));
+  vi.stubGlobal(
+    "matchMedia",
+    vi.fn(() => media),
+  );
   return media;
 }
 

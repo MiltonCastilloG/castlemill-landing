@@ -11,4 +11,3 @@ export function useObservableState<T>(observable$: Observable<T>, initialValue: 
 
   return value;
 }
-
