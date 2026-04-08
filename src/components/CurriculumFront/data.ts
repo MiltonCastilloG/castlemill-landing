@@ -1,169 +1,312 @@
 import type { TranslationObj } from "../../features/translation";
 
 export const curriculumFrontTranslations: TranslationObj = {
-  section1Title: {
-    en: "Academic Vision",
-    es: "Vision Academica",
+  fullName: {
+    en: "Milton Andrés Castillo García",
+    es: "Milton Andrés Castillo García",
   },
-  section1Description: {
-    en: "A clear overview of the educational direction, purpose, and long-term outcomes.",
-    es: "Una vista clara de la direccion educativa, su proposito y los resultados a largo plazo.",
+  contactLine: {
+    en: "linkedin.com/in/milton-andres-castillo-garcia",
+    es: "linkedin.com/in/milton-andres-castillo-garcia",
   },
-  section1Tag1: {
-    en: "Mission",
-    es: "Mision",
+  locationLine: {
+    en: "Santander, Cantabria (39008)",
+    es: "Santander, Cantabria (39008)",
   },
-  section1Tag2: {
-    en: "Structure",
-    es: "Estructura",
+  nationalityLine: {
+    en: "Nationality: Spanish / Salvadoran",
+    es: "Nacionalidad: Espanola / Salvadorena",
   },
-  section1Tag3: {
-    en: "Impact",
-    es: "Impacto",
+  summaryTitle: {
+    en: "Summary",
+    es: "Resumen",
   },
-  section2Title: {
-    en: "Learning Routes",
-    es: "Rutas de Aprendizaje",
+  summaryText: {
+    en: "Computer Engineer with 5+ years of experience (since 2020) in software development, complemented by 4 years of previous experience during university through a part-time work scholarship. Specialized in JavaScript (Node.js, React) environments with a strong profile in backend and software architecture. Experience as lead developer in CMS design and digital content process optimization for international clients. Passionate about solving complex problems with creativity and critical thinking.",
+    es: "Ingeniero Informatico con mas de 5 anos de experiencia (desde 2020) en desarrollo de software, complementados con 4 anos de experiencia previa durante la etapa universitaria mediante beca de trabajo a medio tiempo. Especializado en entornos JavaScript (Node.js, React) con fuerte perfil en backend y arquitectura de software. Experiencia como desarrollador lider en diseno de CMS y optimizacion de procesos de contenido digital para clientes internacionales. Apasionado por resolver problemas complejos con creatividad y pensamiento critico.",
   },
-  section2Description: {
-    en: "Multiple paths for different profiles, pacing, and levels of prior experience.",
-    es: "Multiples caminos para diferentes perfiles, ritmos y niveles de experiencia previa.",
+  experienceTitle: {
+    en: "Experience",
+    es: "Experiencia",
   },
-  section2Tag1: {
-    en: "Beginner",
-    es: "Inicial",
+  role1Title: {
+    en: "Backend Developer",
+    es: "Desarrollador Backend",
   },
-  section2Tag2: {
-    en: "Intermediate",
-    es: "Intermedio",
+  role1Company: {
+    en: "Hiberus Tecnologia (Client: media/news sector)",
+    es: "Hiberus Tecnologia (Cliente: sector media/noticias)",
   },
-  section2Tag3: {
-    en: "Advanced",
-    es: "Avanzado",
+  role1Date: {
+    en: "May 2024 - Present",
+    es: "Mayo 2024 - Actualidad",
   },
-  section3Title: {
-    en: "Projects and Practice",
-    es: "Proyectos y Practica",
+  role1Bullet1: {
+    en: "Development and maintenance of backend infrastructure for international news websites, ensuring high availability and performance.",
+    es: "Desarrollo y mantenimiento de infraestructura backend para sitios web de noticias de alcance internacional, asegurando alta disponibilidad y rendimiento.",
   },
-  section3Description: {
-    en: "Hands-on workspaces designed for practical application and portfolio-ready results.",
-    es: "Espacios de trabajo practicos para aplicar conocimientos y lograr resultados de portafolio.",
+  role1Bullet2: {
+    en: "Led migration of key services to AWS implementing infrastructure as code with Terraform, improving scalability and reducing deployment times.",
+    es: "Lidere migracion de servicios clave a AWS implementando infraestructura como codigo con Terraform, mejorando escalabilidad y reduciendo tiempos de despliegue.",
   },
-  section3Tag1: {
-    en: "Labs",
-    es: "Laboratorios",
+  role1Bullet3: {
+    en: "Designed and implemented efficient RESTful APIs with Node.js, integrating MongoDB and containerization with Docker.",
+    es: "Disene e implemente APIs RESTful eficientes con Node.js, integrando MongoDB y contenedorizacion con Docker.",
   },
-  section3Tag2: {
-    en: "Case Studies",
-    es: "Casos",
+  role1Bullet4: {
+    en: "Participated in implementation and optimization of CI/CD pipelines, streamlining the development lifecycle.",
+    es: "Participe en implementacion y optimizacion de pipelines de CI/CD, agilizando el ciclo de vida del desarrollo.",
   },
-  section3Tag3: {
-    en: "Mentorship",
-    es: "Mentoria",
+  role2Title: {
+    en: "Full Stack Developer",
+    es: "Programador Full Stack",
   },
-  section4Title: {
-    en: "Resources and Materials",
-    es: "Recursos y Materiales",
+  role2Company: {
+    en: "Novabase Neotalent (Client: media/news sector)",
+    es: "Novabase Neotalent (Cliente: sector media/noticias)",
   },
-  section4Description: {
-    en: "A curated collection of references, guides, templates, and support resources.",
-    es: "Una coleccion curada de referencias, guias, plantillas y recursos de apoyo.",
+  role2Date: {
+    en: "Nov 2020 - May 2024 (3 years 6 months)",
+    es: "Nov 2020 - Mayo 2024 (3 anos y 6 meses)",
   },
-  section4Tag1: {
-    en: "Guides",
-    es: "Guias",
+  role2Bullet1: {
+    en: "Full Stack Developer in agile team for creation and maintenance of multiple news portals.",
+    es: "Desarrollador Full Stack en equipo agil para creacion y mantenimiento de multiples portales de noticias.",
   },
-  section4Tag2: {
-    en: "Templates",
-    es: "Plantillas",
+  role2Bullet2: {
+    en: "Key achievement: Designed and led development of internal CMS from scratch to massively modify and unpublish content across thousands of news items, removing these tasks from the development team.",
+    es: "Logro destacado: Disene y lidere desarrollo de CMS interno desde cero para modificar y despublicar contenido masivamente en miles de noticias, eliminando estas tareas del equipo de desarrollo.",
   },
-  section4Tag3: {
-    en: "Documentation",
-    es: "Documentacion",
+  role2Bullet3: {
+    en: "Implemented search and analysis functionalities with Elasticsearch, improving query precision and speed.",
+    es: "Implemente funcionalidades de busqueda y analisis con Elasticsearch, mejorando precision y velocidad de consultas.",
   },
-  section5Title: {
-    en: "Progress and Evaluation",
-    es: "Progreso y Evaluacion",
+  role2Bullet4: {
+    en: "Full-stack development with Node.js + TypeScript (backend) and React (frontend).",
+    es: "Desarrollo full-stack con Node.js + TypeScript (backend) y React (frontend).",
   },
-  section5Description: {
-    en: "Consistent checkpoints to review progress, reinforce competencies, and identify growth.",
-    es: "Puntos de control constantes para revisar avances y reforzar competencias clave.",
+  role2Bullet5: {
+    en: "Migrated critical services from monolithic architecture to microservices, improving resilience and maintainability.",
+    es: "Migre servicios criticos de arquitectura monolitica a microservicios, mejorando resiliencia y mantenibilidad.",
   },
-  section5Tag1: {
-    en: "Milestones",
-    es: "Hitos",
+  role3Title: {
+    en: "Software Developer (Work Scholarship)",
+    es: "Desarrollador de Software (Beca de trabajo)",
   },
-  section5Tag2: {
-    en: "Feedback",
-    es: "Retroalimentacion",
+  role3Company: {
+    en: "Fundacion Universitaria Iberoamericana (FUNIBER)",
+    es: "Fundacion Universitaria Iberoamericana (FUNIBER)",
   },
-  section5Tag3: {
-    en: "Rubrics",
-    es: "Rubricas",
+  role3Date: {
+    en: "Sep 2016 - Jul 2020",
+    es: "Sep 2016 - Jul 2020",
   },
-  section6Title: {
-    en: "Community and Collaboration",
-    es: "Comunidad y Colaboracion",
+  role3Bullet1: {
+    en: "Collaborated on internal project development during university, acquiring practical foundation.",
+    es: "Colabore en desarrollo de proyectos internos durante etapa universitaria, adquiriendo base practica.",
   },
-  section6Description: {
-    en: "Space for discussions, peer interaction, and collaborative development opportunities.",
-    es: "Un espacio para conversaciones, interaccion entre pares y oportunidades de creacion conjunta.",
+  role3Bullet2: {
+    en: "Participated in development of support application for lifeguards in beach environments.",
+    es: "Participe en desarrollo de aplicacion de soporte para salvavidas en entornos de playa.",
   },
-  section6Tag1: {
-    en: "Network",
-    es: "Red",
+  role3Bullet3: {
+    en: "Contributed to development and maintenance of software for university residence management.",
+    es: "Contribui al desarrollo y mantenimiento de software para gestion de residencias universitarias.",
   },
-  section6Tag2: {
-    en: "Workshops",
-    es: "Talleres",
+  role3Bullet4: {
+    en: "Automation of administrative processes including workflow for university degree approval with the Ministry of Education.",
+    es: "Automatizacion de procesos administrativos incluyendo flujo para aprobacion de titulos universitarios ante ministerio de educacion.",
   },
-  section6Tag3: {
-    en: "Shared Goals",
-    es: "Metas Compartidas",
+  educationTitle: {
+    en: "Education",
+    es: "Educacion",
   },
-  footerNote: {
-    en: "This front is a baseline design and can be expanded with more sections, new variants, and real content.",
-    es: "Este front es un diseno base y se puede ampliar con mas secciones, nuevas variantes y contenido real.",
+  education1Degree: {
+    en: "Degree in Computer Engineering, Universidad Europea del Atlantico, Santander",
+    es: "Grado en Ingenieria Informatica, Universidad Europea del Atlantico, Santander",
+  },
+  education1Date: {
+    en: "Sep 2016 - Aug 2020",
+    es: "Sep 2016 - Ago 2020",
+  },
+  education1Bullet1: {
+    en: "Core courses: Data Structures, Algorithms, Databases, Networks, Operating Systems.",
+    es: "Asignaturas principales: Estructuras de Datos, Algoritmos, Bases de Datos, Redes, Sistemas Operativos.",
+  },
+  technicalSkillsTitle: {
+    en: "Technical Skills",
+    es: "Habilidades Tecnicas",
+  },
+  skillsLanguagesLabel: {
+    en: "Languages:",
+    es: "Lenguajes:",
+  },
+  skillsLanguagesValue: {
+    en: "JavaScript (Expert), TypeScript, Java, Python, PHP, Haskell (knowledge)",
+    es: "JavaScript (Experto), TypeScript, Java, Python, PHP, Haskell (conocimientos)",
+  },
+  skillsFrontendLabel: {
+    en: "Frontend:",
+    es: "Frontend:",
+  },
+  skillsFrontendValue: {
+    en: "React (Expert), Next.js (basic)",
+    es: "React (Experto), Next.js (basico)",
+  },
+  skillsBackendLabel: {
+    en: "Backend:",
+    es: "Backend:",
+  },
+  skillsBackendValue: {
+    en: "Node.js (Expert), REST APIs, GraphQL, Microservices",
+    es: "Node.js (Experto), REST APIs, GraphQL, Microservicios",
+  },
+  skillsDatabasesLabel: {
+    en: "Databases:",
+    es: "Bases de Datos:",
+  },
+  skillsDatabasesValue: {
+    en: "MongoDB, DynamoDB, SQL (PostgreSQL, MySQL), Elasticsearch",
+    es: "MongoDB, DynamoDB, SQL (PostgreSQL, MySQL), Elasticsearch",
+  },
+  skillsCloudLabel: {
+    en: "Cloud & DevOps:",
+    es: "Cloud & DevOps:",
+  },
+  skillsCloudValue: {
+    en: "AWS (Lambda, EC2, S3), Docker, Terraform, CI/CD",
+    es: "AWS (Lambda, EC2, S3), Docker, Terraform, CI/CD",
+  },
+  skillsMethodologiesLabel: {
+    en: "Methodologies:",
+    es: "Metodologias:",
+  },
+  skillsMethodologiesValue: {
+    en: "Agile, Scrum, UML",
+    es: "Agile, Scrum, UML",
+  },
+  skillsToolsLabel: {
+    en: "Tools:",
+    es: "Herramientas:",
+  },
+  skillsToolsValue: {
+    en: "Git, Version Control",
+    es: "Git, Control de versiones",
+  },
+  languagesTitle: {
+    en: "Languages",
+    es: "Idiomas",
+  },
+  language1Name: {
+    en: "Spanish:",
+    es: "Espanol:",
+  },
+  language1Level: {
+    en: "Native",
+    es: "Nativo",
+  },
+  language2Name: {
+    en: "English:",
+    es: "Ingles:",
+  },
+  language2Level: {
+    en: "Advanced (C2 Level - TOEFL Certificate with outstanding score). Bilingual education since elementary school.",
+    es: "Avanzado (Nivel C2 - Certificado TOEFL con calificacion sobresaliente). Educacion escolar bilingue desde primaria.",
   },
 };
 
 export type CurriculumFrontKey = keyof typeof curriculumFrontTranslations;
 
-type SectionBlueprint = {
+export type ExperienceItem = {
   titleKey: CurriculumFrontKey;
-  descriptionKey: CurriculumFrontKey;
-  tagKeys: [CurriculumFrontKey, CurriculumFrontKey, CurriculumFrontKey];
+  companyKey: CurriculumFrontKey;
+  dateKey: CurriculumFrontKey;
+  bulletKeys: CurriculumFrontKey[];
 };
 
-export const curriculumFrontSections: SectionBlueprint[] = [
+export const experienceItems: ExperienceItem[] = [
   {
-    titleKey: "section1Title",
-    descriptionKey: "section1Description",
-    tagKeys: ["section1Tag1", "section1Tag2", "section1Tag3"],
+    titleKey: "role1Title",
+    companyKey: "role1Company",
+    dateKey: "role1Date",
+    bulletKeys: ["role1Bullet1", "role1Bullet2", "role1Bullet3", "role1Bullet4"],
   },
   {
-    titleKey: "section2Title",
-    descriptionKey: "section2Description",
-    tagKeys: ["section2Tag1", "section2Tag2", "section2Tag3"],
+    titleKey: "role2Title",
+    companyKey: "role2Company",
+    dateKey: "role2Date",
+    bulletKeys: ["role2Bullet1", "role2Bullet2", "role2Bullet3", "role2Bullet4", "role2Bullet5"],
   },
   {
-    titleKey: "section3Title",
-    descriptionKey: "section3Description",
-    tagKeys: ["section3Tag1", "section3Tag2", "section3Tag3"],
+    titleKey: "role3Title",
+    companyKey: "role3Company",
+    dateKey: "role3Date",
+    bulletKeys: ["role3Bullet1", "role3Bullet2", "role3Bullet3", "role3Bullet4"],
+  },
+];
+
+export type EducationItem = {
+  degreeKey: CurriculumFrontKey;
+  dateKey: CurriculumFrontKey;
+  bulletKeys: CurriculumFrontKey[];
+};
+
+export const educationItems: EducationItem[] = [
+  {
+    degreeKey: "education1Degree",
+    dateKey: "education1Date",
+    bulletKeys: ["education1Bullet1"],
+  },
+];
+
+export type SkillItem = {
+  labelKey: CurriculumFrontKey;
+  valueKey: CurriculumFrontKey;
+};
+
+export const skillItems: SkillItem[] = [
+  {
+    labelKey: "skillsLanguagesLabel",
+    valueKey: "skillsLanguagesValue",
   },
   {
-    titleKey: "section4Title",
-    descriptionKey: "section4Description",
-    tagKeys: ["section4Tag1", "section4Tag2", "section4Tag3"],
+    labelKey: "skillsFrontendLabel",
+    valueKey: "skillsFrontendValue",
   },
   {
-    titleKey: "section5Title",
-    descriptionKey: "section5Description",
-    tagKeys: ["section5Tag1", "section5Tag2", "section5Tag3"],
+    labelKey: "skillsBackendLabel",
+    valueKey: "skillsBackendValue",
   },
   {
-    titleKey: "section6Title",
-    descriptionKey: "section6Description",
-    tagKeys: ["section6Tag1", "section6Tag2", "section6Tag3"],
+    labelKey: "skillsDatabasesLabel",
+    valueKey: "skillsDatabasesValue",
+  },
+  {
+    labelKey: "skillsCloudLabel",
+    valueKey: "skillsCloudValue",
+  },
+  {
+    labelKey: "skillsMethodologiesLabel",
+    valueKey: "skillsMethodologiesValue",
+  },
+  {
+    labelKey: "skillsToolsLabel",
+    valueKey: "skillsToolsValue",
+  },
+];
+
+export type LanguageItem = {
+  nameKey: CurriculumFrontKey;
+  levelKey: CurriculumFrontKey;
+};
+
+export const languageItems: LanguageItem[] = [
+  {
+    nameKey: "language1Name",
+    levelKey: "language1Level",
+  },
+  {
+    nameKey: "language2Name",
+    levelKey: "language2Level",
   },
 ];
