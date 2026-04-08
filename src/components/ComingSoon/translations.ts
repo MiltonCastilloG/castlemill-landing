@@ -6,8 +6,8 @@ export const comingSoonTranslations: TranslationObj = {
     es: "Proximamente...",
   },
   tagline: {
-    en: "Soon with your closest internet provider.",
-    es: "Pronto con tu proveedor de internet mas cercano.",
+    en: "Elves have gone missing, advailable as soon as we find them.",
+    es: "Los elfos se han perdido, disponible cuando los encontremos.",
   },
 };
 

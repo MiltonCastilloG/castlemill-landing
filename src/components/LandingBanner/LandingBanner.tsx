@@ -7,8 +7,6 @@ import { landingBannerTranslations } from "./data";
 export function LandingBanner() {
   const { t } = useTranslations(landingBannerTranslations);
 
-  //         <div className="mx-auto w-full h-screen flex flex-col items-center justify-center max-w-6xl text-center">
-
   return (
     <main className="flex flex-1">
       <section className="flex flex-1 w-full border-y border-lime-300 bg-white px-4 text-black shadow-[0_16px_45px_-24px_rgba(15,23,42,0.18)] sm:px-6 lg:px-8 dark:border-teal-700 dark:bg-teal-950/70 dark:text-teal-100 dark:shadow-[0_16px_45px_-24px_rgba(16,185,129,0.25)]">
@@ -30,7 +28,7 @@ export function LandingBanner() {
             </div>
             <div>
               <Link
-                href="/curriculum"
+                href="/coming-soon"
                 className="inline-flex items-center rounded-full border border-lime-300 bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-lime-50 dark:border-teal-500/80 dark:bg-teal-950 dark:text-teal-100 dark:hover:bg-teal-900"
               >
                 {t("tetrisButton")}
@@ -38,7 +36,7 @@ export function LandingBanner() {
             </div>
             <div>
               <Link
-                href="/curriculum"
+                href="/coming-soon"
                 className="inline-flex items-center rounded-full border border-lime-300 bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-lime-50 dark:border-teal-500/80 dark:bg-teal-950 dark:text-teal-100 dark:hover:bg-teal-900"
               >
                 {t("galleryButton")}

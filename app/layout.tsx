@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { ReactNode } from "react";
+import { Header } from "../src/components/Header";
 
 const themeScript = `(function() {
   try {
@@ -19,7 +20,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="theme-body">{children}</body>
+      <body className="theme-body">
+        <div className="theme-page-gradient min-h-dvh flex flex-col">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
