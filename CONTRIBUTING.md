@@ -22,13 +22,29 @@ npm run dev
 
 Run these locally; extend this list here when we add CI or new scripts.
 
-| Command            | Purpose                                                                  |
-| ------------------ | ------------------------------------------------------------------------ |
-| `npm run lint`     | ESLint via Next.js                                                       |
-| `npx tsc --noEmit` | TypeScript (no npm script yet—add one in `package.json` when convenient) |
-| `npm run build`    | Production build                                                         |
+| Command                 | Purpose                                 |
+| ----------------------- | --------------------------------------- |
+| `npm run lint`          | ESLint across the repo (`eslint .`)     |
+| `npm run format:check`  | Prettier formatting validation          |
+| `npm test`              | Unit/component tests with Vitest        |
+| `npm run test:coverage` | Coverage report + threshold enforcement |
+| `npx tsc --noEmit`      | TypeScript type-check                   |
+| `npm run build`         | Production build                        |
 
 If you change static export behavior, also run `npm run export` and confirm output under `out/` as in the README.
+
+### Coverage policy
+
+Coverage is enforced with Vitest (`npm run test:coverage`) using V8 provider.
+
+- Global thresholds: lines/statements `75`, functions `50`, branches `50`.
+- `src/features/**/*.{ts,tsx}`: lines/statements `90`, functions `80`, branches `70`.
+- `src/components/**/*.{ts,tsx}`: lines/statements `70`, functions `50`, branches `50`.
+
+Scope notes:
+
+- Included for coverage: `app/**/*.{ts,tsx}` and `src/**/*.{ts,tsx}`.
+- Excluded from coverage: test files, barrel files (`index.ts`), and `src/test/**` helpers.
 
 ## Project layout
 
