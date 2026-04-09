@@ -75,7 +75,10 @@ describe("Header", () => {
     expect(screen.getByRole("navigation", { name: "Main navigation" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute("href", "/");
     expect(screen.getByRole("link", { name: "Curriculum" })).toHaveAttribute("href", "/curriculum");
-    expect(screen.getByRole("link", { name: "Play Tetris" })).toHaveAttribute("href", "/coming-soon");
+    expect(screen.getByRole("link", { name: "Play Tetris" })).toHaveAttribute(
+      "href",
+      "/coming-soon",
+    );
     expect(screen.getByRole("link", { name: "Gallery" })).toHaveAttribute("href", "/coming-soon");
     expect(screen.getByRole("button", { name: "Close menu" })).toBeInTheDocument();
   });

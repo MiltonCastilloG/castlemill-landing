@@ -88,18 +88,18 @@ export function CurriculumFront() {
       <div className="mt-6 grid grid-cols-1 gap-6 text-center">
         <CurriculumArticleCard>
           <h2 className="text-sm font-semibold uppercase tracking-wide text-black dark:text-teal-100">
-              {t("personalInfoTitle")}
+            {t("personalInfoTitle")}
           </h2>
           {socialLinks.map((social: { name: string; url: string }, index: number) => (
-          <Link
-            key={`${index}-social-link`}
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 text-sm text-gray-700 underline-offset-2 transition-colors hover:text-lime-700 hover:underline dark:text-teal-200 dark:hover:text-teal-100"
-          >
-            {social.name}
-          </Link>
+            <Link
+              key={`${index}-social-link`}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 text-sm text-gray-700 underline-offset-2 transition-colors hover:text-lime-700 hover:underline dark:text-teal-200 dark:hover:text-teal-100"
+            >
+              {social.name}
+            </Link>
           ))}
           <p className="mt-1 text-sm text-gray-600 dark:text-teal-300">{t("locationLine")}</p>
         </CurriculumArticleCard>

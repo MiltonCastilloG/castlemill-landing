@@ -5,7 +5,7 @@ export const socialLinks: { name: string; url: string }[] = [
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/milton-andres-castillo-garcia-8b2267182/",
   },
-]
+];
 
 export const curriculumFrontTranslations: TranslationObj = {
   fullName: {

@@ -34,7 +34,10 @@ describe("CurriculumFront", () => {
 
     expect(screen.getByRole("heading", { name: "fullName" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: socialLinks[0].name })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: socialLinks[0].name })).toHaveAttribute("href", socialLinks[0].url);
+    expect(screen.getByRole("link", { name: socialLinks[0].name })).toHaveAttribute(
+      "href",
+      socialLinks[0].url,
+    );
     expect(screen.getByText("locationLine")).toBeInTheDocument();
 
     [

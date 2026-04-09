@@ -123,22 +123,21 @@ export function Header() {
             className="flex flex-1 flex-col items-center justify-center gap-6"
             aria-label={t("navAriaLabel")}
           >
-            {
-              NavigationData.map((item, index) => (
-                <Link
-                  key={`${index} -nav-link`}
-                  href={item.url}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`rounded-full px-6 py-3 text-lg font-semibold transition-colors ${
-                    navLinkActive(pathname, item.url)
-                      ? "bg-lime-300 text-black dark:bg-teal-300 dark:text-teal-950"
-                      : "text-black hover:bg-lime-100 dark:text-teal-100 dark:hover:bg-teal-900/60"
-                  }`}
-                  aria-current={navLinkActive(pathname, item.url) ? "page" : undefined}
-                >
-                  {item.text}
-                </Link>
-              ))}
+            {NavigationData.map((item, index) => (
+              <Link
+                key={`${index} -nav-link`}
+                href={item.url}
+                onClick={() => setIsMenuOpen(false)}
+                className={`rounded-full px-6 py-3 text-lg font-semibold transition-colors ${
+                  navLinkActive(pathname, item.url)
+                    ? "bg-lime-300 text-black dark:bg-teal-300 dark:text-teal-950"
+                    : "text-black hover:bg-lime-100 dark:text-teal-100 dark:hover:bg-teal-900/60"
+                }`}
+                aria-current={navLinkActive(pathname, item.url) ? "page" : undefined}
+              >
+                {item.text}
+              </Link>
+            ))}
           </nav>
         </div>
       ) : null}
