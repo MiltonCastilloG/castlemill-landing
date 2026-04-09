@@ -13,7 +13,7 @@ export function PreferencesControls() {
     <>
       <div className="flex items-center gap-2">
         <span className="text-xs text-black dark:text-teal-300">{t("languageLabel")}</span>
-        <div className="inline-flex rounded-full border border-secondary bg-white/85 p-1 dark:border-secondary-dark dark:bg-secondary-dark/90">
+        <div className="inline-flex rounded-full border border-secondary-border bg-white/85 p-1 dark:border-secondary-borderDark dark:bg-secondary-dark/90">
           <button
             type="button"
             onClick={() => setLanguage("es")}
@@ -43,7 +43,7 @@ export function PreferencesControls() {
 
       <div className="flex items-center gap-2">
         <span className="text-xs text-black dark:text-teal-300">{t("themeLabel")}</span>
-        <div className="inline-flex rounded-full border border-secondary bg-white/85 p-1 dark:border-secondary-dark dark:bg-secondary-dark/90">
+        <div className="inline-flex rounded-full border border-secondary-border bg-white/85 p-1 dark:border-secondary-borderDark dark:bg-secondary-dark/90">
           <button
             type="button"
             onClick={() => setTheme("light")}

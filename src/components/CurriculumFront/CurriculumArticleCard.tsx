@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 const panelClassName =
-  "rounded-2xl border border-lime-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-secondary-dark dark:bg-secondary-dark/80";
+  "rounded-2xl border border-lime-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-secondary-borderDark dark:bg-secondary-dark/80";
 
 const insetClassName =
   "rounded-lg border border-lime-100 bg-secondary/40 p-3 dark:border-teal-800 dark:bg-teal-900/30";

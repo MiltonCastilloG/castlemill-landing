@@ -21,6 +21,8 @@ const config: Config = {
         secondary: {
           DEFAULT: "#f7fee7",
           dark: "#042f2e",
+          border: "#bef264",
+          borderDark: "#0f766e",
           textMuted: "#000000",
           textMutedDark: "#99f6e4",
         },

@@ -97,7 +97,7 @@ Color styling should use semantic Tailwind tokens instead of hardcoded palette s
 - Define/update semantic tokens in [tailwind.config.ts](tailwind.config.ts) under `theme.extend.colors`.
 - Use `primary` tokens for global body/theme surfaces and shared body text roles.
 - Use `secondary` tokens for footer-like/accent surfaces and matching UI surfaces.
-- Prefer semantic classes (for example `bg-primary`, `dark:bg-primary-dark`, `border-secondary`, `dark:border-secondary-dark`) over raw classes like `bg-lime-50` / `dark:bg-teal-950`.
+- Prefer semantic classes (for example `bg-primary`, `dark:bg-primary-dark`, `border-secondary-border`, `dark:border-secondary-borderDark`) over raw classes like `bg-lime-50` / `dark:bg-teal-950`.
 - Keep border tokens consistent with their surface role unless there is a clear, intentional design reason to diverge.
 - When introducing a new color role, document its intent here in `CONTRIBUTING.md` in the same PR.
 
