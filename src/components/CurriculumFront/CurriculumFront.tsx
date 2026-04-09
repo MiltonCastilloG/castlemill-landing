@@ -12,7 +12,7 @@ import {
   type EducationItem,
   type LanguageItem,
 } from "./data";
-import { CurriculumArticleCard, CurriculumInsetCard } from "./CurriculumArticleCard";
+import { CurriculumArticleCard, CurriculumInsetCard } from "./CurriculumArticle";
 import Link from "next/link";
 
 export const curriculumExperienceItems: ExperienceItem[] = [
@@ -72,7 +72,7 @@ export function CurriculumFront() {
 
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-      <header className="rounded-3xl border border-lime-200 bg-white p-6 shadow-sm dark:border-secondary-borderDark dark:bg-secondary-dark/80 sm:p-8">
+      <header className="rounded-3xl border border-lime-200 bg-secondary/50 p-6 shadow-sm dark:border-secondary-borderDark dark:bg-secondary-dark/85 sm:p-8">
         <div>
           <div className="flex flex-col items-center text-center">
             <span className="inline-flex rounded-full border border-secondary-border bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-lime-700 dark:border-teal-500 dark:bg-teal-900/50 dark:text-teal-200">

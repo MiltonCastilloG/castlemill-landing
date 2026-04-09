@@ -1,6 +1,6 @@
 "use client";
 
-import { CurriculumArticleCard, CurriculumInsetCard } from "../CurriculumArticleCard";
+import { CurriculumArticleCard, CurriculumInsetCard } from "../CurriculumArticle";
 import { type CurriculumFrontKey } from "../data";
 
 export type SkillItem = {

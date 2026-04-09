@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 
 const panelClassName =
-  "rounded-2xl border border-lime-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-secondary-borderDark dark:bg-secondary-dark/80";
+  "rounded-2xl border border-lime-200 bg-secondary/45 p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-secondary-borderDark dark:bg-secondary-dark/85";
 
 const insetClassName =
-  "rounded-lg border border-lime-100 bg-secondary/40 p-3 dark:border-teal-800 dark:bg-teal-900/30";
+  "rounded-lg border border-lime-200 bg-lime-50/80 p-3 dark:border-teal-700 dark:bg-teal-900/55";
 
 function mergeClassNames(base: string, extra?: string) {
   return extra ? `${base} ${extra}` : base;

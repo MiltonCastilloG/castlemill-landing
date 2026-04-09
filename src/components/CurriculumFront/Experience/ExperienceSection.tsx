@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CurriculumArticleCard } from "../CurriculumArticleCard";
+import { CurriculumArticleCard } from "../CurriculumArticle";
 import { type CurriculumFrontKey } from "../data";
 
 export type ExperienceItem = {
@@ -57,7 +57,7 @@ export function ExperienceSection({ title, t, items }: ExperienceSectionProps) {
                 });
               }
             }}
-            className="relative rounded-xl border border-lime-100 bg-gradient-to-r from-secondary/50 to-white p-4 transition-all hover:border-secondary-border hover:shadow-sm dark:border-teal-800 dark:from-teal-900/35 dark:to-secondary-dark/70 dark:hover:border-teal-600"
+            className="relative rounded-xl border border-lime-200 bg-lime-50/80 p-4 transition-all hover:border-secondary-border hover:shadow-sm dark:border-teal-700 dark:bg-teal-900/55 dark:hover:border-teal-600"
           >
             <span className="absolute -left-[1.35rem] top-5 h-3 w-3 rounded-full border-2 border-white bg-lime-500 dark:border-teal-950 dark:bg-cyan-400" />
             <div className="w-full text-left">
