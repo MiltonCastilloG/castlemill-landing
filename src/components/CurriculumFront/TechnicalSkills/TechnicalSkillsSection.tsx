@@ -1,29 +1,33 @@
 "use client";
 
-import { skillItems, type CurriculumFrontKey, type SkillItem } from "../data";
+import { CurriculumArticleCard, CurriculumInsetCard } from "../CurriculumArticleCard";
+import { type CurriculumFrontKey } from "../data";
+
+export type SkillItem = {
+  labelKey: CurriculumFrontKey;
+  valueKey: CurriculumFrontKey;
+};
 
 type TechnicalSkillsSectionProps = {
   title: string;
   t: (key: CurriculumFrontKey) => string;
+  items: SkillItem[];
 };
 
-export function TechnicalSkillsSection({ title, t }: TechnicalSkillsSectionProps) {
+export function TechnicalSkillsSection({ title, t, items }: TechnicalSkillsSectionProps) {
   return (
-    <article className="rounded-2xl border border-lime-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-teal-700 dark:bg-teal-950/80">
+    <CurriculumArticleCard>
       <h2 className="text-sm font-semibold uppercase tracking-wide text-black dark:text-teal-100">
         {title}
       </h2>
       <dl className="mt-3 space-y-3 text-sm">
-        {skillItems.map((skill: SkillItem) => (
-          <div
-            key={skill.labelKey}
-            className="rounded-lg border border-lime-100 bg-lime-50/40 p-3 dark:border-teal-800 dark:bg-teal-900/30"
-          >
+        {items.map((skill: SkillItem) => (
+          <CurriculumInsetCard key={skill.labelKey}>
             <dt className="font-semibold text-black dark:text-teal-100">{t(skill.labelKey)}</dt>
             <dd className="mt-1 text-gray-700 dark:text-teal-200">{t(skill.valueKey)}</dd>
-          </div>
+          </CurriculumInsetCard>
         ))}
       </dl>
-    </article>
+    </CurriculumArticleCard>
   );
 }

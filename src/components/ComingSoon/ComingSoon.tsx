@@ -7,7 +7,7 @@ export function ComingSoon() {
   const { t } = useTranslations(comingSoonTranslations);
 
   return (
-    <main className="flex flex-1 items-center justify-center px-4">
+    <main className="flex w-full flex-1 flex-col items-center justify-center px-4">
       <div className="mx-auto max-w-xl space-y-4 text-center">
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
           {t("comingSoon")}

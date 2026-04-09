@@ -21,9 +21,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="theme-body">
-        <div className="theme-page-gradient min-h-dvh flex flex-col">
+        <div className="theme-page-gradient flex min-h-dvh flex-col">
           <Header />
-          {children}
+          <div className="flex min-h-0 flex-1 flex-col">{children}</div>
         </div>
       </body>
     </html>

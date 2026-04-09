@@ -1,17 +1,24 @@
 import type { TranslationObj } from "../../features/translation";
 
+export const socialLinks: { name: string; url: string }[] = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/milton-andres-castillo-garcia-8b2267182/",
+  },
+]
+
 export const curriculumFrontTranslations: TranslationObj = {
   fullName: {
     en: "Milton Andrés Castillo García",
     es: "Milton Andrés Castillo García",
   },
-  contactLine: {
-    en: "linkedin.com/in/milton-andres-castillo-garcia",
-    es: "linkedin.com/in/milton-andres-castillo-garcia",
-  },
   locationLine: {
     en: "Santander, Cantabria (39008)",
     es: "Santander, Cantabria (39008)",
+  },
+  personalInfoTitle: {
+    en: "Personal Info",
+    es: "Información Personal",
   },
   nationalityLine: {
     en: "Nationality: Spanish / Salvadoran",
@@ -210,40 +217,12 @@ export const curriculumFrontTranslations: TranslationObj = {
     es: "Ingles:",
   },
   language2Level: {
-    en: "Advanced (C2 Level - TOEFL Certificate with outstanding score). Bilingual education since elementary school.",
-    es: "Avanzado (Nivel C2 - Certificado TOEFL con calificacion sobresaliente). Educacion escolar bilingue desde primaria.",
+    en: "Advanced. Bilingual education since elementary school.",
+    es: "Avanzado. Educación escolar bilingue desde primaria.",
   },
 };
 
 export type CurriculumFrontKey = keyof typeof curriculumFrontTranslations;
-
-export type ExperienceItem = {
-  titleKey: CurriculumFrontKey;
-  companyKey: CurriculumFrontKey;
-  dateKey: CurriculumFrontKey;
-  bulletKeys: CurriculumFrontKey[];
-};
-
-export const experienceItems: ExperienceItem[] = [
-  {
-    titleKey: "role1Title",
-    companyKey: "role1Company",
-    dateKey: "role1Date",
-    bulletKeys: ["role1Bullet1", "role1Bullet2", "role1Bullet3", "role1Bullet4"],
-  },
-  {
-    titleKey: "role2Title",
-    companyKey: "role2Company",
-    dateKey: "role2Date",
-    bulletKeys: ["role2Bullet1", "role2Bullet2", "role2Bullet3", "role2Bullet4", "role2Bullet5"],
-  },
-  {
-    titleKey: "role3Title",
-    companyKey: "role3Company",
-    dateKey: "role3Date",
-    bulletKeys: ["role3Bullet1", "role3Bullet2", "role3Bullet3", "role3Bullet4"],
-  },
-];
 
 export type EducationItem = {
   degreeKey: CurriculumFrontKey;
@@ -256,42 +235,6 @@ export const educationItems: EducationItem[] = [
     degreeKey: "education1Degree",
     dateKey: "education1Date",
     bulletKeys: ["education1Bullet1"],
-  },
-];
-
-export type SkillItem = {
-  labelKey: CurriculumFrontKey;
-  valueKey: CurriculumFrontKey;
-};
-
-export const skillItems: SkillItem[] = [
-  {
-    labelKey: "skillsLanguagesLabel",
-    valueKey: "skillsLanguagesValue",
-  },
-  {
-    labelKey: "skillsFrontendLabel",
-    valueKey: "skillsFrontendValue",
-  },
-  {
-    labelKey: "skillsBackendLabel",
-    valueKey: "skillsBackendValue",
-  },
-  {
-    labelKey: "skillsDatabasesLabel",
-    valueKey: "skillsDatabasesValue",
-  },
-  {
-    labelKey: "skillsCloudLabel",
-    valueKey: "skillsCloudValue",
-  },
-  {
-    labelKey: "skillsMethodologiesLabel",
-    valueKey: "skillsMethodologiesValue",
-  },
-  {
-    labelKey: "skillsToolsLabel",
-    valueKey: "skillsToolsValue",
   },
 ];
 

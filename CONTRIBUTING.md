@@ -52,8 +52,17 @@ Scope notes:
 | ---------------------------------- | -------------------------------------------------------------------- |
 | [app/](app/)                       | Next.js App Router: `layout.tsx`, `page.tsx`, global styles          |
 | [src/components/](src/components/) | UI components                                                        |
+| [src/config/](src/config/)         | App-wide static configuration/constants (no runtime behavior)        |
 | [src/hooks/](src/hooks/)           | React hooks (e.g. observable state helpers)                          |
 | [src/features/](src/features/)     | Encapsulated features (state + behavior), including translation/i18n |
+
+### Choosing `src/config` vs `src/features`
+
+Use these rules when deciding where shared modules belong:
+
+- Put app-wide static constants/config in `src/config/` (for example route maps, fixed limits, environment-independent constants).
+- Keep `src/components/` focused on UI and component-local data/translations.
+- Move a concern to `src/features/<name>/` once it gains behavior/state/hooks/services, even if it started as config.
 
 ### Adding new `src/features` modules
 

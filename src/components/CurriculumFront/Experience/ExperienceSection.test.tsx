@@ -1,7 +1,8 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { ExperienceSection } from "./ExperienceSection";
-import { experienceItems, type CurriculumFrontKey, type ExperienceItem } from "../data";
+import { ExperienceSection, type ExperienceItem } from "./ExperienceSection";
+import { type CurriculumFrontKey } from "../data";
+import { curriculumExperienceItems as experienceItems } from "../CurriculumFront";
 import { resetTranslationMocks } from "../../../test/mocks/translation";
 
 vi.mock("../../../features/translation", async () => {
@@ -18,7 +19,7 @@ describe("ExperienceSection", () => {
 
   it("renders experience items and allows independent toggle", () => {
     const t = (key: CurriculumFrontKey) => key;
-    render(<ExperienceSection title="experienceTitle" t={t} />);
+    render(<ExperienceSection title="experienceTitle" t={t} items={experienceItems} />);
 
     expect(screen.getByRole("heading", { name: "experienceTitle" })).toBeInTheDocument();
 

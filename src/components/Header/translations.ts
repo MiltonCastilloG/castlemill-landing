@@ -13,6 +13,30 @@ export const headerTranslations: TranslationObj = {
     en: "CastleMill",
     es: "CastleMill",
   },
+  navAriaLabel: {
+    en: "Main navigation",
+    es: "Navegación principal",
+  },
+  navHome: {
+    en: "Home",
+    es: "Inicio",
+  },
+  navCurriculum: {
+    en: "Curriculum",
+    es: "Currículum",
+  },
+  navComingSoon: {
+    en: "Coming soon",
+    es: "Próximamente",
+  },
+  openMenu: {
+    en: "Open menu",
+    es: "Abrir menú",
+  },
+  closeMenu: {
+    en: "Close menu",
+    es: "Cerrar menú",
+  },
 };
 
 export type HeaderTranslationKey = keyof typeof headerTranslations;

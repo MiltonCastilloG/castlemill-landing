@@ -1,23 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import { experienceItems, type CurriculumFrontKey, type ExperienceItem } from "../data";
+import { CurriculumArticleCard } from "../CurriculumArticleCard";
+import { type CurriculumFrontKey } from "../data";
+
+export type ExperienceItem = {
+  titleKey: CurriculumFrontKey;
+  companyKey: CurriculumFrontKey;
+  dateKey: CurriculumFrontKey;
+  bulletKeys: CurriculumFrontKey[];
+};
 
 type ExperienceSectionProps = {
   title: string;
   t: (key: CurriculumFrontKey) => string;
+  items: ExperienceItem[];
 };
 
-export function ExperienceSection({ title, t }: ExperienceSectionProps) {
+export function ExperienceSection({ title, t, items }: ExperienceSectionProps) {
   const [openExperienceIndices, setOpenExperienceIndices] = useState<Set<number>>(new Set());
 
   return (
-    <article className="rounded-2xl border border-lime-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-teal-700 dark:bg-teal-950/80">
+    <CurriculumArticleCard>
       <h2 className="text-sm font-semibold uppercase tracking-wide text-black dark:text-teal-100">
         {title}
       </h2>
       <div className="mt-4 space-y-5 border-l-2 border-lime-200 pl-4 dark:border-teal-700">
-        {experienceItems.map((experience: ExperienceItem, index: number) => (
+        {items.map((experience: ExperienceItem, index: number) => (
           <article
             key={experience.titleKey}
             role="button"
@@ -102,6 +111,6 @@ export function ExperienceSection({ title, t }: ExperienceSectionProps) {
           </article>
         ))}
       </div>
-    </article>
+    </CurriculumArticleCard>
   );
 }

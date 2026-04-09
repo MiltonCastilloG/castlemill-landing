@@ -16,9 +16,9 @@ describe("LandingBanner", () => {
       dictionary: {
         heroTitle: "castlemill",
         heroSubtitle: "Milton Castillo Hub",
-        curriculumButton: "View Curriculum",
+        curriculumButton: "Curriculum",
         tetrisButton: "Play Tetris",
-        galleryButton: "View Gallery",
+        galleryButton: "Gallery",
       },
     });
   });
@@ -28,7 +28,7 @@ describe("LandingBanner", () => {
 
     expect(screen.getByRole("heading", { name: "castlemill" })).toBeInTheDocument();
     expect(screen.getByText("Milton Castillo Hub")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "View Curriculum" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Curriculum" })).toHaveAttribute(
       "href",
       "/curriculum",
     );
@@ -36,7 +36,7 @@ describe("LandingBanner", () => {
       "href",
       "/coming-soon",
     );
-    expect(screen.getByRole("link", { name: "View Gallery" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Gallery" })).toHaveAttribute(
       "href",
       "/coming-soon",
     );

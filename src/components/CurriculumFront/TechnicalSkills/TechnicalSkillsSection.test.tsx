@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { TechnicalSkillsSection } from "./TechnicalSkillsSection";
-import { skillItems, type SkillItem } from "../data";
+import { TechnicalSkillsSection, type SkillItem } from "./TechnicalSkillsSection";
+import { curriculumSkillItems as skillItems } from "../CurriculumFront";
 import { resetTranslationMocks } from "../../../test/mocks/translation";
 
 vi.mock("../../../features/translation", async () => {
@@ -18,7 +18,7 @@ describe("TechnicalSkillsSection", () => {
 
   it("renders title and every technical skill item", () => {
     const t = (key: string) => key;
-    render(<TechnicalSkillsSection title="technicalSkillsTitle" t={t} />);
+    render(<TechnicalSkillsSection title="technicalSkillsTitle" t={t} items={skillItems} />);
 
     expect(screen.getByRole("heading", { name: "technicalSkillsTitle" })).toBeInTheDocument();
     skillItems.forEach((skill: SkillItem) => {

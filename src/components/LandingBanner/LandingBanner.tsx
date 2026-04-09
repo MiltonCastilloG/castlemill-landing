@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { NavigationData, HOME_URL } from "../../config/navigation";
 import { useTranslations } from "../../features/translation";
 import { landingBannerTranslations } from "./data";
 
@@ -18,30 +19,16 @@ export function LandingBanner() {
             {t("heroSubtitle")}
           </p>
           <div className="mt-6 flex w-full flex-row items-center justify-center gap-3">
-            <div>
-              <Link
-                href="/curriculum"
-                className="inline-flex items-center rounded-full border border-lime-300 bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-lime-50 dark:border-teal-500/80 dark:bg-teal-950 dark:text-teal-100 dark:hover:bg-teal-900"
-              >
-                {t("curriculumButton")}
-              </Link>
-            </div>
-            <div>
-              <Link
-                href="/coming-soon"
-                className="inline-flex items-center rounded-full border border-lime-300 bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-lime-50 dark:border-teal-500/80 dark:bg-teal-950 dark:text-teal-100 dark:hover:bg-teal-900"
-              >
-                {t("tetrisButton")}
-              </Link>
-            </div>
-            <div>
-              <Link
-                href="/coming-soon"
-                className="inline-flex items-center rounded-full border border-lime-300 bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-lime-50 dark:border-teal-500/80 dark:bg-teal-950 dark:text-teal-100 dark:hover:bg-teal-900"
-              >
-                {t("galleryButton")}
-              </Link>
-            </div>
+            {NavigationData.filter((item) => item.url !== HOME_URL).map((item, index) => (
+              <div key={`${index}-landing-banner-link`}>
+                <Link
+                  href={item.url}
+                  className="inline-flex items-center rounded-full border border-lime-300 bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-lime-50 dark:border-teal-500/80 dark:bg-teal-950 dark:text-teal-100 dark:hover:bg-teal-900"
+                >
+                  {item.text}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>

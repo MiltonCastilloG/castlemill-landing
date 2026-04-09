@@ -1,17 +1,20 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { CurriculumFront } from "./CurriculumFront";
+import {
+  CurriculumFront,
+  curriculumExperienceItems,
+  curriculumSkillItems,
+} from "./CurriculumFront";
 import {
   educationItems,
-  experienceItems,
   languageItems,
-  skillItems,
+  socialLinks,
   type CurriculumFrontKey,
   type EducationItem,
-  type ExperienceItem,
   type LanguageItem,
-  type SkillItem,
 } from "./data";
+import { type ExperienceItem } from "./Experience/ExperienceSection";
+import { type SkillItem } from "./TechnicalSkills/TechnicalSkillsSection";
 import { resetTranslationMocks } from "../../test/mocks/translation";
 
 vi.mock("../../features/translation", async () => {
@@ -30,10 +33,12 @@ describe("CurriculumFront", () => {
     render(<CurriculumFront />);
 
     expect(screen.getByRole("heading", { name: "fullName" })).toBeInTheDocument();
-    expect(screen.getByText("contactLine")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: socialLinks[0].name })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: socialLinks[0].name })).toHaveAttribute("href", socialLinks[0].url);
     expect(screen.getByText("locationLine")).toBeInTheDocument();
 
     [
+      "personalInfoTitle",
       "summaryTitle",
       "experienceTitle",
       "educationTitle",
@@ -43,7 +48,7 @@ describe("CurriculumFront", () => {
       expect(screen.getByRole("heading", { name: headingKey })).toBeInTheDocument();
     });
 
-    experienceItems.forEach((experience: ExperienceItem) => {
+    curriculumExperienceItems.forEach((experience: ExperienceItem) => {
       expect(screen.getByRole("heading", { name: experience.titleKey })).toBeInTheDocument();
       expect(screen.getByText(experience.companyKey)).toBeInTheDocument();
       expect(screen.getByText(experience.dateKey)).toBeInTheDocument();
@@ -53,15 +58,15 @@ describe("CurriculumFront", () => {
     });
 
     fireEvent.click(screen.getByRole("button", { name: /role1Title/i }));
-    experienceItems[0].bulletKeys.forEach((bulletKey: CurriculumFrontKey) => {
+    curriculumExperienceItems[0].bulletKeys.forEach((bulletKey: CurriculumFrontKey) => {
       expect(screen.getByText(bulletKey)).toBeInTheDocument();
     });
 
     fireEvent.click(screen.getByRole("button", { name: /role2Title/i }));
-    experienceItems[0].bulletKeys.forEach((bulletKey: CurriculumFrontKey) => {
+    curriculumExperienceItems[0].bulletKeys.forEach((bulletKey: CurriculumFrontKey) => {
       expect(screen.getByText(bulletKey)).toBeInTheDocument();
     });
-    experienceItems[1].bulletKeys.forEach((bulletKey: CurriculumFrontKey) => {
+    curriculumExperienceItems[1].bulletKeys.forEach((bulletKey: CurriculumFrontKey) => {
       expect(screen.getByText(bulletKey)).toBeInTheDocument();
     });
 
@@ -73,7 +78,7 @@ describe("CurriculumFront", () => {
       });
     });
 
-    skillItems.forEach((skill: SkillItem) => {
+    curriculumSkillItems.forEach((skill: SkillItem) => {
       expect(screen.getByText(skill.labelKey)).toBeInTheDocument();
       expect(screen.getAllByText(skill.valueKey).length).toBeGreaterThan(0);
     });
