@@ -17,18 +17,6 @@ export const headerTranslations: TranslationObj = {
     en: "Main navigation",
     es: "Navegación principal",
   },
-  navHome: {
-    en: "Home",
-    es: "Inicio",
-  },
-  navCurriculum: {
-    en: "Curriculum",
-    es: "Currículum",
-  },
-  navComingSoon: {
-    en: "Coming soon",
-    es: "Próximamente",
-  },
   openMenu: {
     en: "Open menu",
     es: "Abrir menú",

@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { NavigationData, HOME_URL } from "../../config/navigation";
-import { useLanguage, useTranslations } from "../../features/translation";
+import { HOME_URL, NavigationData, navigationTranslations } from "../../config/navigation";
+import { useTranslations } from "../../features/translation";
 import { landingBannerTranslations } from "./data";
 
 export function LandingBanner() {
   const { t } = useTranslations(landingBannerTranslations);
-  const { language } = useLanguage();
+  const { t: tNav } = useTranslations(navigationTranslations);
 
   return (
     <main className="flex flex-1">
@@ -26,7 +26,7 @@ export function LandingBanner() {
                   href={item.url}
                   className="inline-flex items-center rounded-full border border-lime-300 bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-lime-50 dark:border-teal-500/80 dark:bg-teal-950 dark:text-teal-100 dark:hover:bg-teal-900"
                 >
-                  {item.translations[language]}
+                  {tNav(item.id)}
                 </Link>
               </div>
             ))}

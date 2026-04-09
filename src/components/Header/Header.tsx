@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NavigationData, HOME_URL } from "../../config/navigation";
-import { useLanguage, useTranslations } from "../../features/translation";
+import { HOME_URL, NavigationData, navigationTranslations } from "../../config/navigation";
+import { useTranslations } from "../../features/translation";
 import { PreferencesControls } from "./PreferencesControls";
 import { headerTranslations } from "./translations";
 
@@ -17,7 +17,7 @@ export function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslations(headerTranslations);
-  const { language } = useLanguage();
+  const { t: tNav } = useTranslations(navigationTranslations);
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -76,7 +76,7 @@ export function Header() {
                 }`}
                 aria-current={navLinkActive(pathname, item.url) ? "page" : undefined}
               >
-                {item.translations[language]}
+                {tNav(item.id)}
               </Link>
             ))}
           </nav>

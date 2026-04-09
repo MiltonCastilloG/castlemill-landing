@@ -16,9 +16,9 @@ describe("LandingBanner", () => {
       dictionary: {
         heroTitle: "castlemill",
         heroSubtitle: "Milton Castillo Hub",
-        curriculumButton: "Curriculum",
-        tetrisButton: "Play Tetris",
-        galleryButton: "Gallery",
+        curriculum: "Curriculum",
+        playTetris: "Play Tetris",
+        gallery: "Gallery",
       },
     });
   });

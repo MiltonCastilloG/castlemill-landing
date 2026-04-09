@@ -86,6 +86,7 @@ When adding strings:
 
 1. Create/extend a component-local `translations.ts` with a typed dictionary for that component’s keys.
 2. Call `useTranslations(componentTranslations)` inside the component to access `t(key)` values.
+3. For app-wide navigation labels, keep IDs/routes in `src/config/navigation/items.ts` and labels in `src/config/navigation/translations.ts`, then resolve labels via `useTranslations` in UI code.
 
 Document here if we later adopt a different i18n approach or move persistence (e.g. URL, cookie) into this module.
 
