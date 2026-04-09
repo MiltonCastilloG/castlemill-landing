@@ -90,6 +90,17 @@ When adding strings:
 
 Document here if we later adopt a different i18n approach or move persistence (e.g. URL, cookie) into this module.
 
+### Theme color tokens
+
+Color styling should use semantic Tailwind tokens instead of hardcoded palette shades where possible.
+
+- Define/update semantic tokens in [tailwind.config.ts](tailwind.config.ts) under `theme.extend.colors`.
+- Use `primary` tokens for global body/theme surfaces and shared body text roles.
+- Use `secondary` tokens for footer-like/accent surfaces and matching UI surfaces.
+- Prefer semantic classes (for example `bg-primary`, `dark:bg-primary-dark`, `border-secondary`, `dark:border-secondary-dark`) over raw classes like `bg-lime-50` / `dark:bg-teal-950`.
+- Keep border tokens consistent with their surface role unless there is a clear, intentional design reason to diverge.
+- When introducing a new color role, document its intent here in `CONTRIBUTING.md` in the same PR.
+
 ## Commits and pull requests
 
 - Prefer focused changes: one logical concern per PR when practical.

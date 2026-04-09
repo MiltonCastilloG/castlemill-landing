@@ -14,15 +14,15 @@ body {
 @layer utilities {
   /* Main app surfaces */
   .theme-body {
-    @apply bg-lime-50 text-black antialiased dark:bg-teal-950 dark:text-teal-100;
+    @apply bg-primary text-primary-text antialiased dark:bg-primary-dark dark:text-primary-textDark;
   }
 
   .theme-page-gradient {
-    @apply bg-white dark:bg-teal-950;
+    @apply bg-primary-surface dark:bg-primary-dark;
   }
 
   /* Shared text role across multiple features */
   .theme-muted-text {
-    @apply text-black dark:text-teal-300;
+    @apply text-primary-text dark:text-primary-mutedTextDark;
   }
 }

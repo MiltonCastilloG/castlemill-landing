@@ -24,14 +24,14 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className="w-full border-b border-lime-300 dark:border-teal-700">
+    <header className="w-full border-b border-secondary dark:border-secondary-dark">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
         <div className="flex items-center gap-3 sm:gap-6">
           <button
             type="button"
             onClick={() => setIsMenuOpen(true)}
             aria-label={t("openMenu")}
-            className="inline-flex h-10 w-10 flex-col items-center justify-center gap-1 rounded-md border border-lime-300 bg-white/85 transition-colors hover:bg-lime-100 dark:border-teal-700 dark:bg-teal-950/90 dark:hover:bg-teal-900/80"
+            className="inline-flex h-10 w-10 flex-col items-center justify-center gap-1 rounded-md border border-secondary bg-white/85 transition-colors hover:bg-lime-100 dark:border-secondary-dark dark:bg-secondary-dark/90 dark:hover:bg-teal-900/80"
           >
             <span className="h-0.5 w-5 rounded bg-black dark:bg-teal-100" />
             <span className="h-0.5 w-5 rounded bg-black dark:bg-teal-100" />
@@ -49,13 +49,13 @@ export function Header() {
         </div>
       </div>
       {isMenuOpen ? (
-        <div className="fixed inset-0 z-50 flex flex-col bg-lime-50/80 px-6 py-8 backdrop-blur-sm dark:bg-teal-950/80">
+        <div className="fixed inset-0 z-50 flex flex-col bg-secondary/80 px-6 py-8 backdrop-blur-sm dark:bg-secondary-dark/80">
           <div className="flex justify-end">
             <button
               type="button"
               onClick={() => setIsMenuOpen(false)}
               aria-label={t("closeMenu")}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-lime-300 bg-white/85 text-xl leading-none text-black transition-colors hover:bg-lime-100 dark:border-teal-700 dark:bg-teal-900/90 dark:text-teal-100 dark:hover:bg-teal-800"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-secondary bg-white/85 text-xl leading-none text-black transition-colors hover:bg-lime-100 dark:border-secondary-dark dark:bg-teal-900/90 dark:text-teal-100 dark:hover:bg-teal-800"
             >
               ×
             </button>

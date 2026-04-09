@@ -8,7 +8,24 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#f7fee7",
+          dark: "#042f2e",
+          surface: "#ffffff",
+          text: "#000000",
+          textDark: "#ccfbf1",
+          mutedTextDark: "#5eead4",
+        },
+        secondary: {
+          DEFAULT: "#f7fee7",
+          dark: "#042f2e",
+          textMuted: "#000000",
+          textMutedDark: "#99f6e4",
+        },
+      },
+    },
   },
   plugins: [],
 };

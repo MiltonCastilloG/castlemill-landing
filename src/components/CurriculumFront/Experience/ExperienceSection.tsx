@@ -25,7 +25,7 @@ export function ExperienceSection({ title, t, items }: ExperienceSectionProps) {
       <h2 className="text-sm font-semibold uppercase tracking-wide text-black dark:text-teal-100">
         {title}
       </h2>
-      <div className="mt-4 space-y-5 border-l-2 border-lime-200 pl-4 dark:border-teal-700">
+      <div className="mt-4 space-y-5 border-l-2 border-lime-200 pl-4 dark:border-secondary-dark">
         {items.map((experience: ExperienceItem, index: number) => (
           <article
             key={experience.titleKey}
@@ -57,7 +57,7 @@ export function ExperienceSection({ title, t, items }: ExperienceSectionProps) {
                 });
               }
             }}
-            className="relative rounded-xl border border-lime-100 bg-gradient-to-r from-lime-50/50 to-white p-4 transition-all hover:border-lime-300 hover:shadow-sm dark:border-teal-800 dark:from-teal-900/35 dark:to-teal-950/70 dark:hover:border-teal-600"
+            className="relative rounded-xl border border-lime-100 bg-gradient-to-r from-secondary/50 to-white p-4 transition-all hover:border-secondary hover:shadow-sm dark:border-teal-800 dark:from-teal-900/35 dark:to-secondary-dark/70 dark:hover:border-teal-600"
           >
             <span className="absolute -left-[1.35rem] top-5 h-3 w-3 rounded-full border-2 border-white bg-lime-500 dark:border-teal-950 dark:bg-cyan-400" />
             <div className="w-full text-left">
