@@ -1,20 +1,34 @@
+import type { Language } from "../features/translation";
+
 export const HOME_URL = "/";
 
-export const NavigationData: { text: string; url: string }[] = [
+export const NavigationData: { translations: Record<Language, string>; url: string }[] = [
   {
-    text: "Home",
+    translations: {
+      en: "Home",
+      es: "Inicio",
+    },
     url: "/",
   },
   {
-    text: "Curriculum",
+    translations: {
+      en: "Curriculum",
+      es: "Currículum",
+    },
     url: "/curriculum",
   },
   {
-    text: "Play Tetris",
+    translations: {
+      en: "Play Tetris",
+      es: "Jugar Tetris",
+    },
     url: "/coming-soon",
   },
   {
-    text: "Gallery",
+    translations: {
+      en: "Gallery",
+      es: "Galeria",
+    },
     url: "/coming-soon",
   },
 ];

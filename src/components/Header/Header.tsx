@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { NavigationData, HOME_URL } from "../../config/navigation";
 import { useLanguage, useTranslations } from "../../features/translation";
-import { useTheme } from "../../features/theme";
+import { PreferencesControls } from "./PreferencesControls";
 import { headerTranslations } from "./translations";
 
 function navLinkActive(pathname: string, href: string) {
@@ -16,9 +16,8 @@ function navLinkActive(pathname: string, href: string) {
 export function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
   const { t } = useTranslations(headerTranslations);
-  const { theme, setTheme } = useTheme();
+  const { language } = useLanguage();
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -27,7 +26,7 @@ export function Header() {
   return (
     <header className="w-full border-b border-lime-300 dark:border-teal-700">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+        <div className="flex items-center gap-3 sm:gap-6">
           <button
             type="button"
             onClick={() => setIsMenuOpen(true)}
@@ -45,66 +44,8 @@ export function Header() {
             {t("brand")}
           </Link>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="flex items-center gap-2">
-            <span className="mr-2 text-xs text-black dark:text-teal-300">{t("languageLabel")}</span>
-            <div className="inline-flex rounded-full border border-lime-300 bg-white/85 p-1 dark:border-teal-700 dark:bg-teal-950/90">
-              <button
-                type="button"
-                onClick={() => setLanguage("es")}
-                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
-                  language === "es"
-                    ? "bg-lime-300 text-black dark:bg-teal-300 dark:text-teal-950"
-                    : "text-black hover:text-black dark:text-teal-300 dark:hover:text-teal-100"
-                }`}
-                aria-pressed={language === "es"}
-              >
-                ES
-              </button>
-              <button
-                type="button"
-                onClick={() => setLanguage("en")}
-                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
-                  language === "en"
-                    ? "bg-lime-300 text-black dark:bg-teal-300 dark:text-teal-950"
-                    : "text-black hover:text-black dark:text-teal-300 dark:hover:text-teal-100"
-                }`}
-                aria-pressed={language === "en"}
-              >
-                EN
-              </button>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <span className="mr-2 text-xs text-black dark:text-teal-300">{t("themeLabel")}</span>
-            <div className="inline-flex rounded-full border border-lime-300 bg-white/85 p-1 dark:border-teal-700 dark:bg-teal-950/90">
-              <button
-                type="button"
-                onClick={() => setTheme("light")}
-                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
-                  theme === "light"
-                    ? "bg-lime-300 text-black dark:bg-teal-300 dark:text-teal-950"
-                    : "text-black hover:text-black dark:text-teal-300 dark:hover:text-teal-100"
-                }`}
-                aria-pressed={theme === "light"}
-              >
-                Light
-              </button>
-              <button
-                type="button"
-                onClick={() => setTheme("dark")}
-                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
-                  theme === "dark"
-                    ? "bg-lime-300 text-black dark:bg-teal-300 dark:text-teal-950"
-                    : "text-black hover:text-black dark:text-teal-300 dark:hover:text-teal-100"
-                }`}
-                aria-pressed={theme === "dark"}
-              >
-                Dark
-              </button>
-            </div>
-          </div>
+        <div className="hidden flex-wrap items-center gap-3 sm:flex">
+          <PreferencesControls />
         </div>
       </div>
       {isMenuOpen ? (
@@ -135,7 +76,7 @@ export function Header() {
                 }`}
                 aria-current={navLinkActive(pathname, item.url) ? "page" : undefined}
               >
-                {item.text}
+                {item.translations[language]}
               </Link>
             ))}
           </nav>

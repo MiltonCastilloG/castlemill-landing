@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { ReactNode } from "react";
+import { Footer } from "../src/components/Footer";
 import { Header } from "../src/components/Header";
 
 const themeScript = `(function() {
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="theme-page-gradient flex min-h-dvh flex-col">
           <Header />
           <div className="flex min-h-0 flex-1 flex-col">{children}</div>
+          <Footer />
         </div>
       </body>
     </html>
